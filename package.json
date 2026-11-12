@@ -1,0 +1,24 @@
+{
+  "name": "bagaimana-jika-mati-lampu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video dokumenter sains vertikal 9:16 (1080x1920, 30 FPS, ~60 detik): Bagaimana jika mati lampu selama 1 minggu?",
+  "scripts": {
+    "dev": "remotion studio index.ts",
+    "studio": "remotion studio index.ts",
+    "render": "remotion render index.ts MatiLampu mati-lampu.mp4 --codec=h264 --crf=16",
+    "render:narasi": "remotion render index.ts MatiLampu mati-lampu-narasi.mp4 --codec=h264 --crf=16 --props=./props.narasi.json",
+    "still": "remotion still index.ts MatiLampu thumbnail.png --frame=135",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.200",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.200"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "typescript": "5.4.5"
+  }
+}
